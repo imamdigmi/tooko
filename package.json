@@ -1,9 +1,9 @@
 {
-  "name": "ionic-hello-world",
-  "version": "0.0.0",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
-  "private": true,
+  "name": "tooko",
+  "version": "0.0.1",
+  "author": "Imam Digmi",
+  "homepage": "https://imamdigmi.github.io/tooko/",
+  "private": false,
   "scripts": {
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
@@ -42,5 +42,5 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
-  "description": "tooko: An Ionic project"
+  "description": "An eCommerce project build with Ionic framework"
 }
