@@ -1,5 +1,5 @@
 # Tooko
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/tooko-id/tooko-app/blob/master/LICENSE)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/imamdigmi/tooko-app/blob/master/LICENSE)
 
 Tooko adalah aplikasi e-commerce yang dibuat dengan [Ionic](https://ionicframework.com/) yang fokus terhadap kemudahan pengguna dalam menggunakan aplikasi ini.
 
