@@ -7,3 +7,9 @@ Tooko adalah aplikasi e-commerce yang dibuat dengan [Ionic](https://ionicframewo
 
 # Kolaborasi
 Ya!, kami sangat berharapan akan hal itu. Setiap jenis kontribusi dipersilahkan: Membuat issue, hack some code atau memberikan saran untuk fitur-fitur dan lainnya, kritik dan saran terhadapan aplikasi sangat diharapkan and please provide a Pull Request! Terimakasih.
+
+# Tim (unordered)
+- Imam Digmi ([@imamdigmi](https://github.com/imamdigmi))
+- Ofry Y. Sapya ([@ofryj](https://github.com/ofryj))
+- Bangkit Subroto ([@bangkitsubroto](https://github.com/bangkitsubroto))
+- Syarif H. Simanjuntak ([@syarifhs](https://github.com/syarifhs))
