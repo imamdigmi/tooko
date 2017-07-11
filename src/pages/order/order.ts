@@ -1,37 +1,42 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-order',
+  templateUrl: 'order.html',
 })
-export class HomePage {
+export class OrderPage {
 
-   public items : any = [];
-   constructor(public navCtrl: NavController,
-               public http   : Http) {
+  public items : any = [];
+  constructor(public navCtrl: NavController,
+   			  public navParams: NavParams,
+   			  public http   : Http)
+  {
 
-   }
+  }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Order');
+  }
 
-   ionViewWillEnter() {
-      this.load();
-   }
+  ionViewWillEnter() {
+    this.load();
+  }
 
    // Retrieve the JSON encoded data from the remote server
    // Using Angular's Http class and an Observable - then
    // assign this to the items array for rendering to the HTML template
-   load() {
-      this.http.get('http://localhost/resto/retrieve-data.php')
-      .map(res => res.json())
-      .subscribe(data =>
-      {
-         this.items = data;
-      });
-   }
+  load() {
+    this.http.get('http://localhost/resto/retrieve-data.php')
+    .map(res => res.json())
+    .subscribe(data =>
+    {
+    this.items = data;
+    });
+  }
 
 
    // Allow navigation to the AddTechnology page for creating a new entry
@@ -45,14 +50,4 @@ export class HomePage {
    viewEntry(param) {
       this.navCtrl.push('AddTechnology', param);
    }
-
-   addOrder() {
-      this.navCtrl.push('Order');
-   }
-
-   addAbout() {
-      this.navCtrl.push('About');
-   }
-
-
 }

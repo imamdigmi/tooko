@@ -9,16 +9,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  */
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-shirt',
+  templateUrl: 'shirt.html',
 })
-export class AboutPage {
+export class ShirtPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad About');
+    console.log('ionViewDidLoad Shirt');
   }
 
 }

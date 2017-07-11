@@ -5,18 +5,24 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
-import { About } from '../pages/about/about';
-import { Pesen } from '../pages/pesen/pesen';
+import { HomePage } from '../pages/home/home';
+import { JacketPage } from '../pages/jacket/jacket';
+import { ShirtPage } from '../pages/shirt/shirt';
+import { BagPage } from '../pages/bag/bag';
+import { AboutPage } from '../pages/about/about';
+import { OrderPage } from '../pages/order/order';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    About,
-    Pesen
+    AboutPage,
+    OrderPage,
+    BagPage,
+    JacketPage,
+    ShirtPage
 
   ],
   imports: [
@@ -28,8 +34,11 @@ import { Pesen } from '../pages/pesen/pesen';
   entryComponents: [
     MyApp,
     HomePage,
-    About,
-    Pesen
+    AboutPage,
+    OrderPage,
+    BagPage,
+    JacketPage,
+    ShirtPage
 
   ],
   providers: [

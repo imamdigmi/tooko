@@ -9,10 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  */
 @IonicPage()
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html',
+  selector: 'page-jacket',
+  templateUrl: 'jacket.html',
 })
-export class AboutPage {
+export class JacketPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

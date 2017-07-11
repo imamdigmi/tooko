@@ -4,9 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-
-import { About } from '../pages/about/about';
-import { Pesen } from '../pages/pesen/pesen';
+import { AboutPage } from '../pages/about/about';
+import { OrderPage } from '../pages/order/order';
+import { BagPage } from '../pages/bag/bag';
+import { ShirtPage } from '../pages/shirt/shirt';
+import { JacketPage } from '../pages/jacket/jacket';
 
 @Component({
   templateUrl: 'app.html'
@@ -28,13 +30,24 @@ export class MyApp {
   go_to_home(Page){
     this.nav.setRoot(HomePage);
   }
- 
+
   go_to_about(){
-    this.nav.setRoot(About);  
+    this.nav.setRoot(AboutPage);
   }
- 
-  go_to_pesen(){
-    this.nav.setRoot(Pesen);
+
+  go_to_order(){
+    this.nav.setRoot(OrderPage);
+  }
+
+  go_to_bag(){
+    this.nav.setRoot(BagPage);
+  }
+
+  go_to_jaket(){
+    this.nav.setRoot(JacketPage);
+  }
+
+  go_to_shirt(){
+    this.nav.setRoot(ShirtPage);
   }
 }
-
