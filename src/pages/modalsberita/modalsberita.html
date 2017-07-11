@@ -1,0 +1,159 @@
+
+<ion-header>
+   <ion-toolbar>
+      <ion-title>
+         {{ title }}
+      </ion-title>
+      <ion-buttons start>
+         <button ion-button color="primary" (click)="closeModal()">
+            <span showWhen="ios">Cancel</span>
+            <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+         </button>
+      </ion-buttons>
+   </ion-toolbar>
+</ion-header>
+<ion-content>
+   <form [formGroup]="form" (ngSubmit)="saveAkakomfirebase(form.value)">
+
+      <ion-item-divider color="light">
+         <div *ngIf="!isEditable">
+            <h1>Tambah Berita Kampus</h1>
+         </div>
+
+         <div *ngIf="isEditable">
+            <h1>Edit Berita Kampus</h1>
+         </div>
+      </ion-item-divider>
+
+
+      <ion-item>
+         <ion-label stacked>Judul Berita Kampus:</ion-label>
+         <ion-input
+            type="text"
+            formControlName="name"
+            [(ngModel)]="akakomfirebaseName"></ion-input>
+      </ion-item>
+
+
+
+      <ion-item>
+         <ion-label stacked>Link URL Gambar:</ion-label>
+         <ion-input
+            type="text"
+            formControlName="duration"
+            [(ngModel)]="akakomfirebaseDuration"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+         <ion-label stacked>Deskripsi:</ion-label>
+         <ion-textarea
+			rows="6"
+            formControlName="summary"
+            [(ngModel)]="akakomfirebaseSummary"></ion-textarea>
+      </ion-item> 
+
+<!--
+
+      <ion-item>
+         <ion-label stacked>Genre:</ion-label>
+         <ion-select
+            formControlName="genres"
+            multiple="true"
+            [(ngModel)]="akakomfirebaseGenres">
+             <ion-option value="Action">Action</ion-option>
+             <ion-option value="Comedy">Comedy</ion-option>
+             <ion-option value="Documentary">Documentary</ion-option>
+             <ion-option value="Historical">Historical</ion-option>
+             <ion-option value="Romance">Romance</ion-option>
+             <ion-option value="Science Fiction">Science Fiction</ion-option>
+             <ion-option value="Thriller">Thriller</ion-option>
+             <ion-option value="Zombie">Zombie</ion-option>
+             <ion-option value="War">War</ion-option>
+         </ion-select>
+      </ion-item>
+
+
+
+      <ion-item>
+         <ion-label stacked>Actors/actresses:</ion-label>
+         <ion-select
+            formControlName="actors"
+            multiple="true"
+            [(ngModel)]="akakomfirebaseActors">
+             <ion-option value="Keanu Reeves">Keanu Reeves</ion-option>
+             <ion-option value="Ian McShane">Ian McShane</ion-option>
+             <ion-option value="Adrianne Palicki">Adrianne Palicki</ion-option>
+             <ion-option value="Woody Harrelson">Woody Harrelson</ion-option>
+             <ion-option value="Willem Dafoe">Willem Dafoe</ion-option>
+             <ion-option value="John Leguizamo">John Leguizamo</ion-option>
+             <ion-option value="Michael Nyqvist">Michael Nyqvist</ion-option>
+             <ion-option value="Bridget Moynahan">Bridget Moynahan</ion-option>
+             <ion-option value="Alfie Allen">Alfie Allen</ion-option>
+             <ion-option value="Russell Crowe">Russell Crowe</ion-option>
+             <ion-option value="Oliver Reed">Oliver Reed</ion-option>
+             <ion-option value="Joaquin Phoenix">Joaquin Phoenix</ion-option>
+             <ion-option value="Connie Nielsen">Connie Nielsen</ion-option>
+             <ion-option value="Ralf Moeller">Ralf Moeller</ion-option>
+             <ion-option value="Tom Hanks">Tom Hanks</ion-option>
+             <ion-option value="Leonardo Dicaprio">Leonardo Dicaprio</ion-option>
+             <ion-option value="Christopher Walken">Christopher Walken</ion-option>
+             <ion-option value="Mike Myers">Mike Myers</ion-option>
+             <ion-option value="Heather Graham">Heather Graham</ion-option>
+             <ion-option value="Verne Troyer">Verne Troyer</ion-option>
+             <ion-option value="Robert Wagner">Robert Wagner</ion-option>
+             <ion-option value="Rob Lowe">Rob Lowe</ion-option>
+             <ion-option value="Mindy Sterling">Mindy Sterling</ion-option>
+         </ion-select>
+      </ion-item>
+
+
+      <ion-item>
+         <ion-label stacked>Film rating:</ion-label>
+         <ion-select
+            formControlName="rating"
+            [(ngModel)]="akakomfirebaseRating">
+             <ion-option value="PG">PG</ion-option>
+             <ion-option value="12">12</ion-option>
+             <ion-option value="12A">12A</ion-option>
+             <ion-option value="15">15</ion-option>
+             <ion-option value="18">18</ion-option>
+             <ion-option value="U">U</ion-option>
+             <ion-option value="R18">R18</ion-option>
+         </ion-select>
+      </ion-item>
+
+-->
+
+      <ion-item>
+         <ion-label stacked>Tanggal Posting:</ion-label>
+         <ion-input
+            type="text"
+            formControlName="year"
+            [(ngModel)]="akakomfirebaseYear"></ion-input>
+      </ion-item>
+
+
+      <ion-item>
+         <input
+            type="hidden"
+            name="akakomfirebaseId" >
+
+         <button
+           ion-button
+           block
+           color="primary"
+           text-center
+           [disabled]="!form.valid">
+            <div *ngIf="!isEditable">
+               Simpan data Berita Kampus
+            </div>
+
+            <div *ngIf="isEditable">
+               Update data Berita Kampus
+            </div>
+         </button>
+      </ion-item>
+
+   </form>
+</ion-content>

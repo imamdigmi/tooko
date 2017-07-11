@@ -4,10 +4,10 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-berita',
+  templateUrl: 'berita.html'
 })
-export class HomePage {
+export class BeritaPage {
   public akakomfirebase    : FirebaseListObservable<any[]>;
   constructor(public navCtrl: NavController, 
               public alertCtrl: AlertController, 
@@ -24,20 +24,20 @@ export class HomePage {
       this.platform.ready()
       .then(() =>
       {
-         this.akakomfirebase = this.db.list('/infohome');
+         this.akakomfirebase = this.db.list('/beritakampus');
       });
    }
 
     addRecord()
    {
-      let modal = this.modalCtrl.create('Modals');
+      let modal = this.modalCtrl.create('Modalsberita');
       modal.present();
    }
 
    editAkakomfirebase(akakomfirebase)
    {
       let params = { akakomfirebase: akakomfirebase, isEdited: true },
-          modal  = this.modalCtrl.create('Modals', params);
+          modal  = this.modalCtrl.create('Modalsberita', params);
 
       modal.present();
    }

@@ -3,13 +3,13 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Informasi Kampus</ion-title>
+    <ion-title>Berita Kampus</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
    <ion-buttons>
-         <button ion-button full (click)="addRecord()">Tambah Info Kampus</button>
+         <button ion-button full (click)="addRecord()">Tambah Berita Kampus</button>
    </ion-buttons>
    <ion-list>
       <ion-card class="movie" text-wrap *ngFor="let akakomfirebase of akakomfirebase | async">
