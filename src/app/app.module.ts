@@ -1,45 +1,63 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { StatusBar } from '@ionic-native/status-bar';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpModule } from '@angular/http';
+
 import { MyApp } from './app.component';
-
 import { HomePage } from '../pages/home/home';
-import { JacketPage } from '../pages/jacket/jacket';
-import { ShirtPage } from '../pages/shirt/shirt';
-import { BagPage } from '../pages/bag/bag';
+import { BeritakampusPage } from '../pages/beritakampus/beritakampus';
+import { InfokampusPage } from '../pages/infokampus/infokampus';
+import { AkakomlinkPage } from '../pages/akakomlink/akakomlink';
 import { AboutPage } from '../pages/about/about';
-import { OrderPage } from '../pages/order/order';
+import { TabsPage } from '../pages/tabs/tabs';
+import { VisimisiPage } from '../pages/visimisi/visimisi';
+import { KontakPage } from '../pages/kontak/kontak';
 
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyA4bgjrSQn83HVmwhZrmVKn1hBSycVWnyU",
+    authDomain: "akakomfirebase.firebaseapp.com",
+    databaseURL: "https://akakomfirebase.firebaseio.com",
+    projectId: "akakomfirebase",
+    storageBucket: "akakomfirebase.appspot.com",
+    messagingSenderId: "156476598172"
+};
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    BeritakampusPage,
+    InfokampusPage,
+    AkakomlinkPage,
     AboutPage,
-    OrderPage,
-    BagPage,
-    JacketPage,
-    ShirtPage
-
+    TabsPage,
+    VisimisiPage,
+    KontakPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
+    BeritakampusPage,
+    InfokampusPage,
+    AkakomlinkPage,
     AboutPage,
-    OrderPage,
-    BagPage,
-    JacketPage,
-    ShirtPage
-
+    TabsPage,
+    VisimisiPage,
+    KontakPage
   ],
   providers: [
     StatusBar,

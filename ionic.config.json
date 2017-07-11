@@ -1,5 +1,7 @@
 {
   "name": "tooko",
   "app_id": "7ab27117",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "v2": true,
+  "typescript": true
 }

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import {BeritakampusPage} from '../beritakampus/beritakampus';
+import {InfokampusPage} from '../infokampus/infokampus';
+import {AkakomlinkPage} from '../akakomlink/akakomlink';
 
 
 @Component({
@@ -9,50 +12,62 @@ import 'rxjs/add/operator/map';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  infohome: FirebaseListObservable<any[]>;
+  constructor(public navCtrl: NavController, db: AngularFireDatabase) {
+    this.infohome = db.list('/infohome');
+  }
 
-   public items : any = [];
-   constructor(public navCtrl: NavController,
-               public http   : Http) {
+  showBeritakampusPage() {
+    this.navCtrl.push(BeritakampusPage);
+  }
 
-   }
+    showInfokampusPage() {
+    this.navCtrl.push(InfokampusPage);
+  }
 
+    showAkakomlinkPage() {
+    this.navCtrl.push(AkakomlinkPage);
+  }
 
-   ionViewWillEnter() {
-      this.load();
-   }
+  slides = [
+    {
+      image: "assets/slide/a.jpg"
+    },
+    {
+      image: "assets/slide/b.jpg"
+    },
+    {
+      image: "assets/slide/c.jpg"
+    },
+    {
+      image: "assets/slide/d.jpg"
+    },
+    {
+      image: "assets/slide/e.jpg"
+    },
+    {
+      image: "assets/slide/f.jpg"
+    },
+    {
+      image: "assets/slide/g.jpg"
+    },
+    {
+      image: "assets/slide/h.jpg"
+    },
+    {
+      image: "assets/slide/i.jpg"
+    },
+    {
+      image: "assets/slide/j.jpg"
+    },
+    {
+      image: "assets/slide/k.jpg"
+    },
+    {
+      image: "assets/slide/l.jpg"
+    }
+  ];
 
-   // Retrieve the JSON encoded data from the remote server
-   // Using Angular's Http class and an Observable - then
-   // assign this to the items array for rendering to the HTML template
-   load() {
-      this.http.get('http://localhost/resto/retrieve-data.php')
-      .map(res => res.json())
-      .subscribe(data =>
-      {
-         this.items = data;
-      });
-   }
-
-
-   // Allow navigation to the AddTechnology page for creating a new entry
-   addEntry() {
-      this.navCtrl.push('AddTechnology');
-   }
-
-   // Allow navigation to the AddTechnology page for amending an existing entry
-   // (We supply the actual record to be amended, as this method's parameter,
-   // to the AddTechnology page
-   viewEntry(param) {
-      this.navCtrl.push('AddTechnology', param);
-   }
-
-   addOrder() {
-      this.navCtrl.push('Order');
-   }
-
-   addAbout() {
-      this.navCtrl.push('About');
-   }
-
+  
 
 }

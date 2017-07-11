@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="new1">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Info Kampus</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page home grid-basic-page getting-started card-background-page home" >
+  <ion-card *ngFor="let infokampus of infokampus | async">
+  <img src="{{ infokampus.duration }}">
+  <ion-card-content>
+    <ion-item><p style="text-align: right;">Admin, {{ infokampus.year }}</p></ion-item>
+    <p><b>{{ infokampus.title }}</b></p>
+    <p style="text-align: justify;">{{ infokampus.summary }}</p>
+  </ion-card-content>
+</ion-card>
+</ion-content>
+
