@@ -1,0 +1,106 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>{{ pageTitle }}</ion-title>
+   </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+   <div>
+      <ion-item *ngIf="isEdited && !hideForm">
+         <button
+            ion-button
+            item-right
+            color="secondary"
+            text-center
+            block
+            (click)="deleteEntry()">Hapus Data</button>
+      </ion-item>
+
+
+      <div *ngIf="hideForm">
+         <ion-item class="post-entry-message" text-wrap>
+            <h2>Berhasil!</h2>
+            <p>Silahkan kembali ke Halaman Pemesanan. <p>
+         </ion-item>
+      </div>
+
+
+      <div *ngIf="!hideForm">
+         <form [formGroup]="form" (ngSubmit)="saveEntry()">
+
+            <ion-list>
+               <ion-item-group>
+                  <ion-item-divider color="light">Nama Pemesan *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Masukan nama..."
+                        formControlName="nama_pemesan"
+                        [(ngModel)]="tecNamapemesan"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+
+
+               <ion-item-group>
+                  <ion-item-divider color="light">Nama Menu *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Nama Menu..."
+                        formControlName="nama_menu"
+                        [(ngModel)]="tecNamamenu"></ion-input>
+                  </ion-item>
+               </ion-item-group>
+			   
+               <ion-item-group>
+                  <ion-item-divider color="light">Jenis *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="SUKI / DIMSUM / DESSERT / MINUMAN"
+                        formControlName="jenis"
+                        [(ngModel)]="tecJenis"></ion-input>
+                  </ion-item>
+               </ion-item-group>			   
+			   
+               <ion-item-group>
+                  <ion-item-divider color="light">Harga *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Harga..."
+                        formControlName="harga"
+                        [(ngModel)]="tecHarga"></ion-input>
+                  </ion-item>
+               </ion-item-group>			   
+			   
+               <ion-item-group>
+                  <ion-item-divider color="light">Jumlah *</ion-item-divider>
+                  <ion-item>
+                     <ion-input
+                        type="text"
+                        placeholder="Jumlah..."
+                        formControlName="jumlah"
+                        [(ngModel)]="tecJumlah"></ion-input>
+                  </ion-item>
+               </ion-item-group>			   
+			   
+               <ion-item>
+                  <button
+                     ion-button
+                     color="primary"
+                     text-center
+                     block
+                     [disabled]="!form.valid">SIMPAN</button>
+               </ion-item>
+
+            </ion-list>
+
+         </form>
+      </div>
+   </div>
+
+
+</ion-content>

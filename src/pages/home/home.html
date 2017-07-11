@@ -1,14 +1,367 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Beranda</ion-title>
-  </ion-navbar>
+   <ion-navbar>
+
+    <ion-buttons left>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+      <ion-title>
+         X.O SUKI & DIMSUM RESTAURANT
+      </ion-title>
+
+   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Login Success!</h3>
-  <br>
-  <button ion-button (click)="logOut()">
-    Keluar
-    <!-- <ion-icon name="log-out"></ion-icon> -->
-  </button>
+
+<ion-card>
+      <img src="assets/images/sukidaging1.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+      SUKI BEEF
+      </ion-card-title>
+      <p>
+         Suki ini adalah suki dari daging sapi yang udah dipotong tipis-tipis.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 30.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>
+
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/suki2.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+      SUKI ENOKI
+      </ion-card-title>
+      <p>
+         Suki ini dibuat dari jamur yang luarnya dibalut dengan daging sapi yang sudah dipotong tipis-tipis.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 26.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/sukiPutih.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+      SUKI UDANG
+      </ion-card-title>
+      <p>
+         Suki ini dibuat dari udang yang sudah digiling.
+         
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 29.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+
+
+
+   <ion-card>
+      <img src="assets/images/ayam_panggang_aroma.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         ALA CARTE 1
+      </ion-card-title>
+      <p>
+         Ayam panggang aroma
+      ini berupa ayam panggang bisa pesen untuk porsi seekor ataupun setengah ekor. 
+      Ayam panggang nya dibumbui dengan bawang putih yang dicincang halus dan digoreng. 
+      Kemudian diberi sedikit siraman minyak dan daun bawang. Aromanya haruuum banget dan sangat menggoda lidah. 
+      Tekstur ayam panggangnya lembut dan empuk, enak banget. 
+      Bumbunya pun meresap dengan sempurna hingga kedalam daging.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 35.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/bebek1.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         ALA CARTE 2
+      </ion-card-title>
+      <p>
+          Bebek Panggang ini dibilang masakan yang sangat unik. 
+          Dari cara memasaknya dengan memasukkan semua bumbu dan bahan ke dalam perut bebek. 
+          Kemudian baru dipanggang sampai matang.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 54.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/hakau.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         DIM SUM HAKAU
+      </ion-card-title>
+      <p>
+         Dim sum ini disebut juga dengan hakau. 
+         Terbuat dari campuran tepung dan udang, dim sum ini memiliki rasa yang gurih dan sedikit kenyal. 
+         Untuk menyajikan dim sum ini sebaiknya Anda sajikan lengkap bersama mayonnaise atau saus agar semakin lezat.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 30.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/siomayUdang.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         DIM SUM CRYSTAL
+      </ion-card-title>
+      <p>
+         Siomay adalah salah satu makanan yang banyak peminatnya di Indonesia. 
+         Selain rasanya yang enak ,dim sum juga terkenal dengan aneka jenis yang bahan lauk yang digunakan. 
+         Beberapa daging seperti daging ayam giling, daging ikan atau udang dapat dijadikan bahan utama membuat dim sum.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="abang">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 30.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="abang"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/love potion mini.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         MINUMAN
+      </ion-card-title>
+      <p>
+         <b>Love Potion mini</b><br>
+         Minuman ini bisa untuk 2 sampai 3 orang, yang didalamnya dapat berisi buah-buahan.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="janda">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 35.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="janda"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>         
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/oreo.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         MINUMAN
+      </ion-card-title>
+      <p>
+         <b>Oreo Cheese Parfait</b><br>
+         menu Oreo Cheese Parfait. Menu ini terdiri dari es krim vanilla, biskuit Oreo, keju kecil yang garing, dan wafer di bagian bawahnya. 
+         Es krimnya cukup enak. 
+         Ditambah dengan biskui Oreo yang pastinya sangat serasi dengan es krim Vannila. 
+         Dicampur dengan wafer dan keju, membuat menu ini terlihat segar dan manis.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="janda">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 25.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="janda"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>          
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/kelapa.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         DESSERT
+      </ion-card-title>
+      <p>
+         <b>Pudding Kelapa</b><br>
+         Pudding yang dibuat dari air kelapa muda yang di masak dengan gula dan ditempatkan di tempurung kelapa ang masih muda.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="jeruk">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 18.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="jeruk"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button> 
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/kopi.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         DESSERT
+      </ion-card-title>
+      <p>
+         <b>Puding Kopi</b><br>
+         Puding Kopi merupakan salah satu olahan dari agar-agar yang didihkan dengan kopi yang sudah dicampur air.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="jeruk">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 18.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="jeruk"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button>          
+      </ion-col>
+      </ion-row>
+      </ion-card>
+      
+      <ion-card>
+      <img src="assets/images/mangga.jpg"/>
+      <ion-card-content>
+      <ion-card-title>
+         DESSERT
+      </ion-card-title>
+      <p>
+         <b>Puding Mangga</b><br>
+         puding mangga menjadi salah satu inovasi olahan mangga. 
+         Selama ini biasanya buah mangga hanya dinikmati secara langsung atau dibuat menjadi jus.
+      </p>
+   </ion-card-content>
+   
+   <ion-row no-padding>
+      <ion-col>
+          <button ion-button icon-left clear small color="jeruk">
+               <ion-icon name="pricetag"></ion-icon>
+               <div>Harga Rp 18.000</div>
+         </button>
+      <button
+         class="add" ion-button icon-right clear small color="jeruk"
+         (click)="addEntry()">
+            Pesan
+            <ion-icon name="add"></ion-icon>
+      </button> 
+      </ion-col>
+      </ion-row>
+      </ion-card>
+
 </ion-content>

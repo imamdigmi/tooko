@@ -1,1 +1,25 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu side="left" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>        
+    <ion-content>
+        <ion-list>
+            <ion-item (click)="go_to_home()" menuClose>
+               <ion-icon name="ios-home"></ion-icon>
+                &nbsp;&nbsp; Beranda
+            </ion-item>
+            <ion-item (click)="go_to_pesen()" menuClose>
+               <ion-icon name="ios-restaurant"></ion-icon>
+                &nbsp;&nbsp;&nbsp; Pemesanan
+            </ion-item>
+            <ion-item (click)="go_to_about()" menuClose>
+               <ion-icon name="people"></ion-icon>
+                &nbsp;&nbsp; Tentang Kami
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

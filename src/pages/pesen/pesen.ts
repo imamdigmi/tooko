@@ -1,24 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
-
+@IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-pesen',
+  templateUrl: 'pesen.html',
 })
-export class HomePage {
+export class Pesen {
 
-   public items : any = [];
-   constructor(public navCtrl: NavController,
-               public http   : Http)
-   {
+  public items : any = [];
+  constructor(public navCtrl: NavController, 
+   			  public navParams: NavParams,
+   			  public http   : Http) 
+  {
 
-   }
+  }
 
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad Pesen');
+  }
 
-   ionViewWillEnter()
+     ionViewWillEnter()
    {
       this.load();
    }
@@ -50,16 +54,5 @@ export class HomePage {
    {
       this.navCtrl.push('AddTechnology', param);
    }
-
-   addPesan()
-   {
-      this.navCtrl.push('Pesen');
-   }
-
-   addAbout()
-   {
-      this.navCtrl.push('About');
-   }
-
 
 }
