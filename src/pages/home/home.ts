@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import {BeritakampusPage} from '../beritakampus/beritakampus';
-import {InfokampusPage} from '../infokampus/infokampus';
-import {AkakomlinkPage} from '../akakomlink/akakomlink';
+import { NewsPage } from '../news/news';
+import { InfoPage } from '../info/info';
+import { LinkPage } from '../link/link';
 
 
 @Component({
@@ -17,57 +17,30 @@ export class HomePage {
     this.infohome = db.list('/infohome');
   }
 
-  showBeritakampusPage() {
-    this.navCtrl.push(BeritakampusPage);
+  showNewsPage() {
+    this.navCtrl.push(NewsPage);
   }
 
-    showInfokampusPage() {
-    this.navCtrl.push(InfokampusPage);
+  showInfoPage() {
+    this.navCtrl.push(InfoPage);
   }
 
-    showAkakomlinkPage() {
-    this.navCtrl.push(AkakomlinkPage);
+  showLinkPage() {
+    this.navCtrl.push(LinkPage);
   }
 
   slides = [
-    {
-      image: "assets/slide/a.jpg"
-    },
-    {
-      image: "assets/slide/b.jpg"
-    },
-    {
-      image: "assets/slide/c.jpg"
-    },
-    {
-      image: "assets/slide/d.jpg"
-    },
-    {
-      image: "assets/slide/e.jpg"
-    },
-    {
-      image: "assets/slide/f.jpg"
-    },
-    {
-      image: "assets/slide/g.jpg"
-    },
-    {
-      image: "assets/slide/h.jpg"
-    },
-    {
-      image: "assets/slide/i.jpg"
-    },
-    {
-      image: "assets/slide/j.jpg"
-    },
-    {
-      image: "assets/slide/k.jpg"
-    },
-    {
-      image: "assets/slide/l.jpg"
-    }
+    {image: "assets/slide/a.jpg"},
+    {image: "assets/slide/b.jpg"},
+    {image: "assets/slide/c.jpg"},
+    {image: "assets/slide/d.jpg"},
+    {image: "assets/slide/e.jpg"},
+    {image: "assets/slide/f.jpg"},
+    {image: "assets/slide/g.jpg"},
+    {image: "assets/slide/h.jpg"},
+    {image: "assets/slide/i.jpg"},
+    {image: "assets/slide/j.jpg"},
+    {image: "assets/slide/k.jpg"},
+    {image: "assets/slide/l.jpg"}
   ];
-
-  
-
 }

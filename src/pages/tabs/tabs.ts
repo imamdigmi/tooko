@@ -5,7 +5,7 @@ import 'rxjs/add/operator/map';
 
 import { AboutPage } from '../about/about';
 import { VisimisiPage } from '../visimisi/visimisi';
-import { KontakPage } from '../kontak/kontak';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-tabs',
@@ -15,9 +15,9 @@ export class TabsPage {
 
   tab1Root: any = AboutPage;
   tab2Root: any = VisimisiPage;
-  tab3Root: any = KontakPage;
+  tab3Root: any = ContactPage;
 
-  constructor(public navCtrl: NavController, public http   : Http) 
+  constructor(public navCtrl: NavController, public http   : Http)
   {
 
   }

@@ -1,58 +1,37 @@
 <ion-header>
-  <ion-navbar color="new1">
+  <ion-navbar color="donker">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >Home</ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content class="page home grid-basic-page getting-started card-background-page home" >
+<ion-content class="page home grid-basic-page getting-started card-background-page home">
   <div class="home-hello">
-    <img src="assets/home/kop.jpg">
+    <img src="assets/home/headimage.jpg">
   </div>
+
   <div>
-    <p padding>Galery Terkini</p>
-    <ion-slides slidesPerView="3"  pager style="height:30%; background-color:azure;">
-      <ion-slide *ngFor="let slide of slides">
-        <img [src]="slide.image" class="slide-image"/>
+    <ion-slides slidesPerView="3" pager style="height:30%; background-color:#2980b9;">
+      <ion-slide *ngFor="let slide of slides" class="slide-c">
+        <img [src]="slide.image" class="slide-image" />
       </ion-slide>
-   </ion-slides>
+    </ion-slides>
   </div>
+
   <ion-card>
-    <img src="https://4.bp.blogspot.com/-7NPKSdqV2PU/WTmfkIEojGI/AAAAAAAAAU4/-QEfo0DpqcIwYgXRmK1HbaxAxypS6q8zwCLcB/s320/akreditasi.png"/>
-    <ion-card-content>
-      <ion-item-group>
-        <ion-item-divider color="light"><b>STARATA SATU (S1)</b></ion-item-divider>
-        <ion-item><ion-icon name="md-checkmark-circle-outline"></ion-icon> Sistem Informasi</ion-item>
-        <ion-item><ion-icon name="md-checkmark-circle-outline"></ion-icon> Teknik Infomatika</ion-item>
-      </ion-item-group>  
-      <ion-item-group>
-        <ion-item-divider color="light"><b>DIPLOMA TIGA (D3)</b></ion-item-divider>
-        <ion-item><ion-icon name="md-checkmark-circle-outline"></ion-icon> Manajemen Infomatika</ion-item>
-        <ion-item><ion-icon name="md-checkmark-circle-outline"></ion-icon> Teknik Komputer</ion-item>
-        <ion-item><ion-icon name="md-checkmark-circle-outline"></ion-icon> Komputerisasi Akuntansi</ion-item>
-      </ion-item-group>    
-    </ion-card-content>
+    <img src="https://4.bp.blogspot.com/-7NPKSdqV2PU/WTmfkIEojGI/AAAAAAAAAU4/-QEfo0DpqcIwYgXRmK1HbaxAxypS6q8zwCLcB/s320/akreditasi.png" />
   </ion-card>
+
   <ion-card *ngFor="let infohome of infohome | async">
-    <img src="{{ infohome.duration }}"/>
+    <img src="{{ infohome.duration }}" />
     <ion-card-content>
       <p style="text-align: justify;">{{ infohome.summary }}</p>
     </ion-card-content>
   </ion-card>
-  
-  <div class="home-hello" style="background-color: #1bc3b0; color:white; text-align: center;" padding>
-    Informasi Lainnya: <br>
-    <a (click)="showBeritakampusPage()"> Berita Kampus</a> | <a (click)="showInfokampusPage()"> Info Kampus </a> | <a onclick="window.open('http://pmb.akakom.ac.id', '_system', 'location=yes'); return false;"> PMB</a> | <a (click)="showAkakomlinkPage()"> Akakom Link</a> <br>
-    Jl. Raya Janti No. 143, Karang Jambe, Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55918, Telp.(0274) 486664<br>
-    <ion-icon class="custom-icon" ios="ios-globe" md="md-globe" onclick="window.open('http://www.akakom.ac.id', '_system', 'location=yes'); return false;"></ion-icon>
 
-    <ion-icon class="custom-icon" ios="logo-twitter" md="logo-twitter" onclick="window.open('https://twitter.com/therealakakom?lang=en', '_system', 'location=yes'); return false;"></ion-icon>
-
-    <ion-icon class="custom-icon" ios="logo-instagram" md="logo-instagram" onclick="window.open('https://www.instagram.com/stmikakakom/?hl=en', '_system', 'location=yes'); return false;"></ion-icon>
-
-    <ion-icon class="custom-icon" ios="logo-facebook" md="logo-facebook" onclick="window.open('https://www.facebook.com/akakomyogya/?fref=ts', '_system', 'location=yes'); return false;"></ion-icon>
+  <div class="home-hello" style="background-color: #2980b9; color:white; text-align: center;" padding>
+    Copyright &copy; 2017 Tooko Indonesia
   </div>
 </ion-content>
-

@@ -4,12 +4,12 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Component({
-  selector: 'page-kontak',
-  templateUrl: 'kontak.html'
+  selector: 'page-contact',
+  templateUrl: 'contact.html'
 })
-export class KontakPage {
+export class ContactPage {
 
-  constructor(public navCtrl: NavController, public http   : Http) 
+  constructor(public navCtrl: NavController, public http   : Http)
   {
 
   }

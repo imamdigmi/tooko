@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar color="donker">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Berita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page home grid-basic-page getting-started card-background-page home" >
+  <ion-card *ngFor="let news of news | async">
+    <img src="{{ news.duration }}">
+    <ion-card-content>
+      <ion-item><p style="text-align: right;">Admin, {{ news.year }}</p></ion-item>
+      <p><b>{{ news.title }}</b></p>
+      <p style="text-align: justify;">{{ news.summary }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

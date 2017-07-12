@@ -1,102 +1,100 @@
 page-home {
- .avatarImage {
+  .avatarImage {
     width: 100%;
     height: auto;
-}
-.grid-basic-page {
-
-  ion-col div {
-    border-radius: 5px;
-    text-align: center;
-    background: rgba(66, 127, 235, 0.26);
-    color: white;
   }
 
-  p {
-    padding: 10px 0 0 10px !important;
-    margin: 0;
-  }
+  .grid-basic-page {
+    ion-col div {
+      border-radius: 5px;
+      text-align: center;
+      background: rgba(66, 127, 235, 0.26);
+      color: white;
+    }
 
-}
-/*
+    p {
+      padding: 10px 0 0 10px !important;
+      margin: 0;
+    }
+  }
+  /*
 .home {
     background: #222;
   }
 */
-.card-background-page {
-
-  ion-card {
-    position: relative;
-    text-align: center;
-  }
-
-  ion-card-header{
-    background-color: #bad4f8;
-    }
-  
-  ion-card-content {
-    text-align: justify;
+  .card-background-page {
+    ion-card {
+      position: relative;
+      text-align: center;
     }
 
-  .card-title {
-    position: absolute;
-    top: 36%;
-    font-size: 2.0em;
-    width: 100%;
-    font-weight: bold;
-    color: #fff;
-  }
+    ion-card-header {
+      background-color: #bad4f8;
+    }
 
-  .card-subtitle {
-    font-size: 1.0em;
-    position: absolute;
-    top: 52%;
-    width: 100%;
-    color: #fff;
-  }
+    ion-card-content {
+      text-align: justify;
+    }
 
-
-}
-
- .getting-started {
-  .home-hello {
-    position: relative;
-
-    .hello-title {
+    .card-title {
       position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0;
-      border: 0;
-      background: rgba(255, 255, 255, 0.6);
-      padding: 10px;
+      top: 36%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
     }
 
-    h1 {
-      margin-top: 0;
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
     }
   }
 
- }
+  .getting-started {
+    .home-hello {
+      position: relative;
 
- .custom-icon {
-  font-size: 22px;
-  color : #488aff;
-}
-/* .slide-zoom {
+      .hello-title {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        border: 0;
+        background: rgba(255, 255, 255, 0.6);
+        padding: 10px;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .custom-icon {
+    font-size: 22px;
+    color: #488aff;
+  }
+
+  .slide-zoom {
     height: 100%;
-  }
-*/
-  .slide-title {
-    margin-top: 2.8rem;
   }
 
   .slide-image {
+    border-radius: 25px;
+    border: 2px solid #ecf0f1;
+
     max-height: 50%;
     max-width: 90%;
     margin: 18px 0;
-    border-radius:75%; 
   }
 
+  .slide-c {
+    border-bottom: 2px solid #34495e;
+    padding-bottom: 20px;
+  }
 }

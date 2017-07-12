@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'page-akakomlink',
-  templateUrl: 'akakomlink.html'
+  selector: 'page-link',
+  templateUrl: 'link.html'
 })
-export class AkakomlinkPage {
+export class LinkPage {
   items = [
     'Siakad Portal',
     'Sikeu Portal',

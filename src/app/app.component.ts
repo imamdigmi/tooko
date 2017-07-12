@@ -3,9 +3,9 @@ import { Nav, Platform } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { BeritakampusPage } from '../pages/beritakampus/beritakampus';
-import { InfokampusPage } from '../pages/infokampus/infokampus';
-import { AkakomlinkPage } from '../pages/akakomlink/akakomlink';
+import { NewsPage } from '../pages/news/news';
+import { InfoPage } from '../pages/info/info';
+import { LinkPage } from '../pages/link/link';
 import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
@@ -23,11 +23,11 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage, icon:'ios-home' },
-      { title: 'Berita Kampus', component: BeritakampusPage, icon:'ios-paper' },
-      { title: 'Info Kampus', component: InfokampusPage, icon:'md-list-box' },
-      { title: 'Akakom Profile', component: TabsPage, icon:'md-contact' },
-      { title: 'Tautan', component: AkakomlinkPage, icon:'md-link' }
+      { title: 'Home', component: HomePage, icon:'ios-arrow-forward' },
+      { title: 'News', component: NewsPage, icon:'ios-arrow-forward' },
+      { title: 'Info', component: InfoPage, icon:'ios-arrow-forward' },
+      { title: 'Profil', component: TabsPage, icon:'ios-arrow-forward' },
+      { title: 'Link', component: LinkPage, icon:'ios-arrow-forward' }
     ];
 
   }

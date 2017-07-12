@@ -5,13 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BeritakampusPage } from '../pages/beritakampus/beritakampus';
-import { InfokampusPage } from '../pages/infokampus/infokampus';
-import { AkakomlinkPage } from '../pages/akakomlink/akakomlink';
+import { NewsPage } from '../pages/news/news';
+import { InfoPage } from '../pages/info/info';
+import { LinkPage } from '../pages/link/link';
 import { AboutPage } from '../pages/about/about';
 import { TabsPage } from '../pages/tabs/tabs';
 import { VisimisiPage } from '../pages/visimisi/visimisi';
-import { KontakPage } from '../pages/kontak/kontak';
+import { ContactPage } from '../pages/contact/contact';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,13 +32,13 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    BeritakampusPage,
-    InfokampusPage,
-    AkakomlinkPage,
+    NewsPage,
+    InfoPage,
+    LinkPage,
     AboutPage,
     TabsPage,
     VisimisiPage,
-    KontakPage
+    ContactPage
   ],
   imports: [
     BrowserModule,
@@ -51,13 +51,13 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    BeritakampusPage,
-    InfokampusPage,
-    AkakomlinkPage,
+    NewsPage,
+    InfoPage,
+    LinkPage,
     AboutPage,
     TabsPage,
     VisimisiPage,
-    KontakPage
+    ContactPage
   ],
   providers: [
     StatusBar,
