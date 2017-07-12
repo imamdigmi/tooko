@@ -5,6 +5,10 @@
 
 Tooko adalah aplikasi e-commerce yang dibuat dengan [Ionic](https://ionicframework.com/) yang fokus terhadap kemudahan pengguna dalam menggunakan aplikasi ini.
 
+# NOTE!!!
+TookoID pada awalnya dibuat untuk eCommerce, karena tidak sampai selesai dan untuk mengejar waktu yang tersisa cukup singkat maka dari itu kami mengubahnya ke profil kampus.
+
+
 ## Kebutuhan sistem
 1. [Node v7+](https://nodejs.org/en/)
 2. [Ionic v3](https://ionicframework.com/)
